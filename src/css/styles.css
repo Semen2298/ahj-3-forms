@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    color: #999;
+    height: 100vh;
+    width: 100%;
+    font-family: "Arial", sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+    height: 100%;
+}
+.btn {
+    background: none;
+    border: none;
+    background-color: chartreuse;
+    padding: 16px 32px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6e2091;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-transform: uppercase;
+}
+.btn:hover {
+    background-color: #6e2091;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.tooltip {
+    position: absolute;
+    width: 420px;
+    z-index: 1;
+    border-radius: 24px;
+    border: none;
+    background-color: #6e2091;
+    color: #fff;
+    padding: 15px;
+}
+.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #6e2091 transparent;
+}
+.tooltip h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: chartreuse;
+}
